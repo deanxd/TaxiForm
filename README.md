@@ -2,4 +2,4 @@
 first commit
 
 
-this is a test for LBS programer
+this is a test for LBS program
