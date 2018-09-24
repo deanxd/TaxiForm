@@ -1,4 +1,4 @@
-package com.jtsoft.base.core.utils.log;
+package com.deanxd.taxiform.util;
 
 import android.text.TextUtils;
 import android.util.Log;

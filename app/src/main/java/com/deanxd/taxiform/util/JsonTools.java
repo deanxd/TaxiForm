@@ -1,4 +1,4 @@
-package com.jtsoft.base.core.utils;
+package com.deanxd.taxiform.util;
 
 
 import com.google.gson.Gson;
@@ -10,7 +10,6 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import com.jtsoft.base.core.utils.log.LogTools;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +40,6 @@ public class JsonTools {
             return gson.toJson(bean);
         } catch (Exception e) {
             e.printStackTrace();
-            LogTools.e(e);
         }
         return null;
     }

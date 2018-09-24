@@ -5,4 +5,10 @@ package com.deanxd.taxiform.ui.mvp;
  */
 
 public interface IView {
+
+    void showLoading();
+
+    void hideLoading();
+
+    void showToastMsg(String message);
 }
