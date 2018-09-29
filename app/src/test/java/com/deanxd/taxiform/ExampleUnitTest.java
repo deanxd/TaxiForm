@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.EventListener;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -57,8 +58,25 @@ public class ExampleUnitTest {
                 .url("https://www.baidu.com")
                 .build();
 
-        Response execute = okHttpClient.newCall(request).execute();
 
-        System.out.print("response:" + execute.body().string());
+        System.out.println("working thread:" + Thread.currentThread());
+
+
+        Response response = okHttpClient.newCall(request).execute();
+        System.out.print("response:" + response.body().string());
+
+/*        okHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                System.out.println("working thread:" + Thread.currentThread());
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                System.out.println("working thread:" + Thread.currentThread());
+                System.out.print("response:" + response.body().string());
+            }
+        });*/
+
     }
 }

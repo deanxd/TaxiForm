@@ -34,16 +34,6 @@ public class SplashActivity extends Activity {
     }
 
     private void startCountDown() {
-
-   /*     disposable = Observable.timer(3, TimeUnit.SECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Long>() {
-                    @Override
-                    public void accept(Long aLong) throws Exception {
-                        LogTools.e("count down:-->" + aLong);
-                    }
-                });*/
-
         disposable = Observable.interval(1, 1, TimeUnit.SECONDS)
                 .take(3)
                 .observeOn(AndroidSchedulers.mainThread())
